@@ -11,6 +11,11 @@
         <th><%= link_to "edit", edit_post_path(post.id,) %></th>
         <th><%= link_to "destroy", post_path(post.id), method: :delete %></th>        
       </tr>
+    <% @total += post.money %>
   <% end %>
+  <tr>
+    <th>合計金額</th>
+    <th><%= @total %></th>
+  </tr>
 </table>
 <%= link_to "new", new_post_path %>

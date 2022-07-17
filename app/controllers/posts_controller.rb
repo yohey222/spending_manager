@@ -2,6 +2,7 @@ class PostsController < ApplicationController
   def index
     @month = params[:month] ? Date.parse(params[:month]) : Time.current
     @posts = Post.where(user_id: current_user.id, spend_date: @month.all_month).order(:spend_date)
+    @total = 0
   end
 
   def new
