@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   def index
-    now = Time.current
-    @posts = Post.where(user_id: current_user.id, spend_date: now.all_month).order(:spend_date)
+    @month = params[:month] ? Date.parse(params[:month]) : Time.current
+    @posts = Post.where(user_id: current_user.id, spend_date: @month.all_month).order(:spend_date)
   end
 
   def new
@@ -30,6 +30,12 @@ class PostsController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+    redirect_to posts_path
   end
 
   private

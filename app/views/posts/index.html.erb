@@ -1,5 +1,6 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
+<%= link_to "前の月", posts_path(month: @month.prev_month) %>
+<p><%= @month.month %>月分の支出</p>
+<%= link_to "次の月", posts_path(month: @month.next_month) %>
 
 <table>
   <% @posts.each do |post| %>
@@ -7,7 +8,8 @@
         <th><%= post.spend_date %></th>
         <th><%= post.title %></th>
         <th><%= post.money %></th>
-        <th><%= link_to "edit", edit_post_path(post.id) %></th>
+        <th><%= link_to "edit", edit_post_path(post.id,) %></th>
+        <th><%= link_to "destroy", post_path(post.id), method: :delete %></th>        
       </tr>
   <% end %>
 </table>

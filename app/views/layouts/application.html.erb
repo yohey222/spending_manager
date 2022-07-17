@@ -11,6 +11,9 @@
   </head>
 
   <body>
+    <header>
+      <li><%= link_to "LogOut", destroy_user_session_path, method: :delete %></li>
+    </header>
     <%= yield %>
   </body>
 </html>
