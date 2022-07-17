@@ -8,7 +8,7 @@
         <th><%= post.spend_date %></th>
         <th><%= post.title %></th>
         <th><%= post.money %></th>
-        <th><%= link_to "edit", edit_post_path(post.id,) %></th>
+        <th><%= link_to "edit", edit_post_path(post.id) %></th>
         <th><%= link_to "destroy", post_path(post.id), method: :delete %></th>        
       </tr>
     <% @total += post.money %>
