@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   def index
-    @now = Date.today
-    @posts = Post.where(user_id: current_user.id).order(:spend_date)
+    now = Time.current
+    @posts = Post.where(user_id: current_user.id, spend_date: now.all_month).order(:spend_date)
   end
 
   def new
