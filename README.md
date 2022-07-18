@@ -1,24 +1,12 @@
-# README
+# シンプルな支出管理アプリケーション
+日付、金額、商品サービス名を入力するだけで、月ごとの支出を見える化
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### 制作動機
+> 　つみたての投資始めてみたいから、おかね投資に回すために節約したいな<br>
+> でもあんまりお金貯まらない、いったい何にお金使ってるんだろ<br>
+> 今月の出費結構やばいし、家計簿つけて無駄な買い物しないようにしよ<br>
+> 　うーんでも家計簿アプリって細かいし正確すぎて、そこまで真面目に管理するのは億劫だな<br>
+> 日付と名前と金額だけわかればいいし、スプレッドシートで管理しよ<br>
+> 　んーでもいちいちスプレッドシート開くのめんどいな<br>
+> いいや自分でサイト作ろ、買い物したその場でスマホに少ないクリックでデータ保存してくれるサイトつくろ<br>
+> 自分が欲しい機能だけだし楽ちん<br>
