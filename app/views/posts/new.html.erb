@@ -1,4 +1,5 @@
-<%= form_for(@post) do |f| %>
+<p>@month: <%= @month %></p>
+<%= form_with(model: @post, local: true) do |f| %>
   <div>
     <%= f.date_select :spend_date %>
   </div>
@@ -13,5 +14,4 @@
   <div>
     <%= f.submit "POST" %>
   </div>
-  
 <% end %>

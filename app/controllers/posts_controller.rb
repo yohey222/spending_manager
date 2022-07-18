@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
+  before_action :month_devide
+
   def index
-    @month = params[:month] ? Date.parse(params[:month]) : Time.current
     @posts = Post.where(user_id: current_user.id, spend_date: @month.all_month).order(:spend_date)
     @total = 0
   end
@@ -40,6 +41,9 @@ class PostsController < ApplicationController
   end
 
   private
+  def month_devide
+    @month = params[:month] ? Date.parse(params[:month]) : Time.current
+  end
   def post_params
     params.require(:post).permit(:user_id, :title, :spend_date, :money)
   end
